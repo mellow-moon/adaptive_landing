@@ -1,0 +1,114 @@
+.page-footer {
+  display: grid;
+  justify-items: center;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 950px;
+  }
+}
+
+.page-footer__logo-mobile {
+  padding-top: 40px;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    justify-self: start;
+    padding-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-footer__socials {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+
+  @media (max-width: @tablet-width) {
+    padding-bottom: 36px;
+  }
+}
+
+.page-footer__socials__list {
+  list-style: none;
+  margin: 0;
+	padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+
+.page-footer__socials__list__item__link__yt-logo {
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+
+.round {
+  text-align: center;
+  border: 3px solid @lightgrey;
+  width: 50px;
+  line-height: 50px;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.round:hover {
+  border: 3px solid @black;
+}
+
+.round:active {
+  border: 3px solid @lightgrey;
+  opacity: 0.7;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-self: right;
+    margin-right: 25px;
+  }
+}
+
+.page-footer__copyright__text {
+  font: 1.2em "Open Sans", sans-serif;
+  color: @darkgrey;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 16px 0 0;
+}

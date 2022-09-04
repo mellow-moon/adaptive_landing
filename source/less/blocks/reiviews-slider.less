@@ -1,0 +1,210 @@
+.reiviews-slider {
+  position: relative;
+  text-align: center;
+  margin-top: -40px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: 235px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0px;
+    display: block;
+  }
+}
+
+.reiviews-slider__quotes {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 72px;
+    margin-bottom: 50px;
+  }
+}
+
+.reiviews-slider__content {
+  display: grid;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 900px 1fr;
+  }
+}
+
+.reiviews-slider__content__left-arrow {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .reiviews-slider__content__left-arrow {
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/left_arrow.svg);
+    background-size: cover;
+    cursor: pointer;
+    align-self: center;
+    justify-self: right;
+    width: 22px;
+    height: 41px;
+    display: block;
+    margin-bottom: 100px;
+  }
+
+  .reiviews-slider__content__left-arrow:hover {
+    background-image: url(../img/left_arrow_hover.svg);
+  }
+
+  .reiviews-slider__content__left-arrow:active {
+    background-image: url(../img/left_arrow_active.svg);
+  }
+}
+
+.reiviews-slider__content__right-arrow {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .reiviews-slider__content__right-arrow {
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/right_arrow.svg);
+    background-size: cover;
+    cursor: pointer;
+    align-self: center;
+    justify-self: left;
+    width: 22px;
+    height: 41px;
+    display: block;
+    margin-bottom: 100px;
+  }
+
+  .reiviews-slider__content__right-arrow:hover {
+    background-image: url(../img/right_arrow_hover.svg);
+  }
+
+  .reiviews-slider__content__right-arrow:active {
+    background-image: url(../img/right_arrow_active.svg);
+  }
+}
+
+.reiviews-slider__content__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.reiviews-slider__content__list__item {
+  align-self: center;
+  height: 250px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.reiviews-slider__blockquote {
+  display: grid;
+  grid-template-rows: 1fr 70px 25px;
+}
+
+.reiviews-slider__controls {
+  z-index: 20;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.reiviews-slider__blockquote__author-name {
+  font: 1.2em "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 0;
+  padding: 40px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.reiviews-slider__blockquote__text {
+  font: 1.2em "Open Sans", sans-serif;
+  color: @black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+
+  @media(min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.reiviews-slider__blockquote__text-mobile {
+  display: none;
+
+  @media (max-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.reiviews-slider__blockquote__text-tablet {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1 / 2;
+  }
+}
+
+.reiviews-slider__blockquote__author-description {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: @black;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.reiviews-slider__controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: @lightgrey;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.reiviews-slider__controls .current {
+  background-color: @white;
+  border: 5px solid @darkgrey;
+}
